@@ -564,7 +564,7 @@ class SignTab(tk.Frame):
             with open(out, "wb") as f:
                 f.write(sig)
 
-            self.after(0, self._status.ok, f"완료:\n{out}")
+            self.after(0, self._status.ok, f"{out}")
         except Exception as e:
             self.after(0, self._status.err, str(e))
 
